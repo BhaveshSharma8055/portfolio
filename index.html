@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavesh Sharma - Copywriter Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'League Spartan', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #ADBBDA;
+            color: white;
+            padding: 1.2em 0;
+            text-align: center;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 20px;
+        }
+
+        header h1 {
+            font-family: 'League Spartan', sans-serif;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'League Spartan', sans-serif;
+            padding: 6px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #8AA4B8;
+        }
+
+        .section {
+            padding: 50px 0;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        #intro {
+            background-color: #ffffff;
+        }
+
+        #push-notifications {
+            background-color: #f8f8f8;
+        }
+
+        #brand-campaigns {
+            background-color: #ffffff;
+        }
+
+        #email-copy {
+            background-color: #f8f8f8;
+        }
+
+        #brainstorms {
+            background-color: #ffffff;
+        }
+
+        #recco-lab {
+            background-color: #f8f8f8;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        /* Intro Section Enhancements */
+        .intro-container {
+            background-color: #f0f4f8;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: 40px;
+            justify-content: flex-start;
+        }
+
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            max-width: 150px;
+            height: auto;
+        }
+
+        .intro p {
+            margin-bottom: 1.5em;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .intro h2{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .intro-text{
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .intro-text h2 {
+           font-size: 2em;
+        }
+        .intro-text p{
+            font-size: 1.1em;
+            color: #667;
+        }
+
+        /* Slideshow styles */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .slide img {
+            max-width: 80%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .slide img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .slide-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .slide-button:hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            position: relative;
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .modal-pushes {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #222;
+        }
+
+        .enlarged-img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+        }
+
+        .brand-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        #push-notifications h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: fadeIn 1s ease, slideInDown 0.5s ease-out;
+        }
+
+        #push-notifications p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 0 10%;
+            animation: fadeIn 1s ease 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bhavesh Sharma</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#push-notifications">Push Notifications</a></li>
+                    <li><a href="#brand-campaigns">Brand Campaigns</a></li>
+                    <li><a href="#email-copy">Email Copy</a></li>
+                    <li><a href="#brainstorms">Brainstorms</a></li>
+                    <li><a href="#recco-lab">Recco Lab</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro" class="section">
+            <div class="container intro-container">
+                <img src="./images/profile-photo.jpeg" alt="Bhavesh Sharma">
+                <div class="intro-text" style="margin-left: 40px;">
+                  <h2>About Me</h2>
+                  <p>Hi, I'm Bhavesh Sharma. I'm a copywriter, cinephile, cricket fanatic, and someone who believes a push notification
+                      can change your day.
+                      I don't have agency experience (yet), but I've made memes that got reposted, ads that don't exist (but should),
+                      and I'm trying to turn "just ideas" into my reality.</p>
+                  <p>But if you read even one thing here and smile, think, or say "damn, that's clever" then maybe I'm already doing
+                      the job. I write words that act like people. They flirt,
+                      argue, persuade, and vibe.</p>
+                  <p>This portfolio isn't just about my work. It's about how I think. I love ads that make you pause. Push notifications
+                      that feel like a friend. Movies that feel like therapy.</p>
+                  <p>If you're looking for fresh ideas, sharp copy, and a mind that's always cooking, we should talk.</p>
+                </div>
+            </div>
+        </section>
+        <section id="push-notifications" class="section">
+            <div class="container">
+                <h2>Push Notifications</h2>
+                <p>The dings that don’t disappoint. Welcome to the place where app alerts have personality. From “Add to Cart” to “Ab batao kya dekhna hai?” these push notifications are quick bursts of wit, drama, and relatability. Because let’s be honest, we all open an app faster when it flirts a little.</p>
+                <div class="slideshow-container" id="push-notification-slideshow">
+                    <div class="slide" data-brand="Prime Video" data-pushes="New season. New secrets. And no, we won’t spoil it (yet).|You can pull ‘one more episode’ tonight. Tomorrow is WFH.|We (listen &amp;) don’t judge your watchlist. Even that reality show." data-image="images/Push Notifications/push1.jpg">
+                        <img src="images/Push Notifications/push1.jpg" alt="Prime Video Logo">
+                        <button class="slide-button" data-brand-name="Prime Video">Prime Video</button>
+                        <p class="slide-text">New season. New secrets. And no, we won’t spoil it (yet).</p>
+                    </div>
+                    <div class="slide" data-brand="Fevicol" data-pushes="Your relationship? Stronger than Fevicol. Nice Try Diddy|Jod aisa ki toote nahi unless ofcourse it’s your charger wire.|We can fix broken things. Emotions? Still working on that.|Log jaate hain. Fevicol rehta hai." data-image="images/Push Notifications/push2.jpg">
+                        <img src="images/Push Notifications/push2.jpg" alt="Fevicol Logo">
+                        <button class="slide-button" data-brand-name="Fevicol">Fevicol</button>
+                        <p class="slide-text">Your relationship? Stronger than Fevicol. Nice Try Diddy</p>
+                    </div>
+                    <div class="slide" data-brand="Durex" data-pushes="Better safe than 3AM panic Googling.|Your personality isn’t the only thing with layers. Stay safe, stay wrapped.|Foreplay starts with a notification.|You’re not weird. You’re just exploring. (We listen. We don’t judge.)|Kinks? Cool. Confusion? Totally fine. Questions? Ask.|Try not be any kind of Daddy, We Got you! Love Sex Durex." data-image="images/Push Notifications/push3.jpg">
+                        <img src="images/Push Notifications/push3.jpg" alt="Durex Logo">
+                        <button class="slide-button" data-brand-name="Durex">Durex</button>
+                        <p class="slide-text">Better safe than 3AM panic Googling.</p>
+                    </div>
+                    <div class="slide" data-brand="Zepto" data-pushes="Banana. Ice cream. Candle. You sure it’s a breakup?|Ordered 3 times in 5 Days? Still Alive? Just Checking in.|Your cravings run faster than us (Almost)|Grocery at 2AM? You’re valid. (We Deliver. We don’t judge.)|Chocolate. Chips. Closure? (Alliteration) All delivered with an English Lesson." data-image="images/Push Notifications/push4.jpg">
+                        <img src="images/Push Notifications/push4.jpg" alt="Zepto Logo">
+                        <button class="slide-button" data-brand-name="Zepto">Zepto</button>
+                        <p class="slide-text">Banana. Ice cream. Candle. You sure it’s a breakup?</p>
+                    </div>
+                    <div class="slide" data-brand="Zomato" data-pushes="Your cheat day just matched with your mood.|You deserve a pizzzzzzzza today. And that many Zs after that Pizza.|Bombardino Pizza vs Tralalero Burger. Who’s winning?" data-image="images/Push Notifications/push5.jpg">
+                        <img src="images/Push Notifications/push5.jpg" alt="Zomato Logo">
+                        <button class="slide-button" data-brand-name="Zomato">Zomato</button>
+                        <p class="slide-text">Your cheat day just matched with your mood.</p>
+                    </div>
+                    <div class="slide" data-brand="Swiggy Instamart" data-pushes="Your lazy best friend, but faster.|‘Insta’nt noodles. ‘Insta’nt mood fix. Swiggy ‘Insta’mart. Tap Already |Not judging, but chips and cola for dinner? Same here.|Ordered 5-Star again? Respect for ‘Doing Nothing’ Context - 'Be Your Own Sugar Daddy' Meme|Be your own Sugar Daddy. Salt Daddy. Oats Daddy. Order your groceries Now on Swiggy Instamart!" data-image="images/Push Notifications/push6.jpg">
+                        <img src="images/Push Notifications/push6.jpg" alt="Swiggy Instamart Logo">
+                        <button class="slide-button" data-brand-name="Swiggy Instamart">Swiggy Instamart</button>
+                        <p class="slide-text">Your lazy best friend, but faster.</p>
+                    </div>
+                    <div class="slide" data-brand="Swiggy" data-pushes="Hangover doesn’t come with a cook. Order now. Save your Sunday.|Breakup combo: fries + soda + closure.|Too lazy to cook? Even your kitchen agrees.|Add to cart. Add to heart ♥️" data-image="images/Push Notifications/push7.jpg">
+                        <img src="images/Push Notifications/push7.jpg" alt="Swiggy Logo">
+                        <button class="slide-button" data-brand-name="Swiggy">Swiggy</button>
+                        <p class="slide-text">Hangover doesn’t come with a cook. Order now. Save your Sunday.</p>
+                    </div>
+                    <div class="slide" data-brand="Flipkart" data-pushes="Window shopping is a sport. And you’re winning.|Retail therapy in session.|Your wishlist has feelings too.|Cart full? Mood full. Checkout Now!" data-image="images/Push Notifications/push8.jpg">
+                        <img src="images/Push Notifications/push8.jpg" alt="Flipkart Logo">
+                        <button class="slide-button" data-brand-name="Flipkart">Flipkart</button>
+                        <p class="slide-text">Window shopping is a sport. And you’re winning.</p>
+                    </div>
+                    <div class="slide" data-brand="Myntra" data-pushes="Mood: dressing better than your ex’s taste.|Those pants in your cart? They miss you.|You don’t need an occasion. You are the occasion.|Slay now, cry later.|GRWU - Get Ready With Us" data-image="images/Push Notifications/push9.jpg">
+                        <img src="images/Push Notifications/push9.jpg" alt="Myntra Logo">
+                        <button class="slide-button" data-brand-name="Myntra">Myntra</button>
+                        <p class="slide-text">Mood: dressing better than your ex’s taste.</p>
+                    </div>
+                    <div class="slide" data-brand="Ajio" data-pushes="Fashionably sad is still fashionable.|New fit. New you. New beginnings.|Don’t just wear it. Own it.|You found the vibe. Now claim the look." data-image="images/Push Notifications/push10.jpg">
+                        <img src="images/Push Notifications/push10.jpg" alt="Ajio Logo">
+                        <button class="slide-button" data-brand-name="Ajio">Ajio</button>
+                        <p class="slide-text">Fashionably sad is still fashionable.</p>
+                    </div>
+                    <div class="slide" data-brand="Airbnb" data-pushes="Book the stay. Escape the overthinking.|That solo trip idea? Say less.|Get lost. Find peace.|Same problems, better view." data-image="images/Push Notifications/push11.jpg">
+                        <img src="images/Push Notifications/push11.jpg" alt="Airbnb Logo">
+                        <button class="slide-button" data-brand-name="Airbnb">Airbnb</button>
+                        <p class="slide-text">Book the stay. Escape the overthinking.</p>
+                    </div>
+                    <div class="slide" data-brand="Fancode" data-pushes="Missed the match? We got you.|Win or lose, We (fans) turn up.|Your team. Your drama. Your channel." data-image="images/Push Notifications/push12.jpg">
+                        <img src="images/Push Notifications/push12.jpg" alt="Fancode Logo">
+                        <button class="slide-button" data-brand-name="Fancode">Fancode</button>
+                        <p class="slide-text">Missed the match? We got you.</p>
+                    </div>
+                    <div class="slide" data-brand="FnP (Ferns & Petals)" data-pushes="Send flowers. She’ll like it.|Sorry isn’t enough? Try cake.|Flowers for others. Brownies for you.|Emotions delivered. On time." data-image="images/Push Notifications/push13.jpg">
+                        <img src="images/Push Notifications/push13.jpg" alt="FnP (Ferns & Petals) Logo">
+                        <button class="slide-button" data-brand-name="FnP (Ferns & Petals)">FnP (Ferns & Petals)</button>
+                        <p class="slide-text">Send flowers. She’ll like it.</p>
+                    </div>
+                    <div class="slide" data-brand="Home Workout App" data-pushes="Sweat now. Cry later.|No gym? No excuses.|Workout = therapy but cheaper.|We see you trying. We’re proud." data-image="images/Push Notifications/push14.jpg">
+                        <img src="images/Push Notifications/push14.jpg" alt="Home Workout App Logo">
+                        <button class="slide-button" data-brand-name="Home Workout App">Home Workout App</button>
+                        <p class="slide-text">Sweat now. Cry later.</p>
+                    </div>
+                    <div class="slide" data-brand="IMDB" data-pushes="Movie nights need good ratings. We deliver.|Curious about that actor? We got the scoop (a real good).|One review spiral a day keeps boredom away.|That movie wrecked you? Same." data-image="images/Push Notifications/push15.jpg">
+                        <img src="images/Push Notifications/push15.jpg" alt="IMDB Logo">
+                        <button class="slide-button" data-brand-name="IMDB">IMDB</button>
+                        <p class="slide-text">Movie nights need good ratings. We deliver.</p>
+                    </div>
+                    <div class="slide" data-brand="INOX PVR" data-pushes="Tickets? Done. Drama? Optional.|Experience cinema the way God intended.|Popcorn + heartbreak = healing combo.|Recliner? King in the Castle. King in the Castle." data-image="images/push notifications/push16.jpg">
+                        <img src="images/push notifications/push16.jpg" alt="INOX PVR Logo">
+                        <button class="slide-button" data-brand-name="INOX PVR">INOX PVR</button>
+                        <p class="slide-text">Tickets? Done. Drama? Optional.</p>
+                    </div>
+                    <div class="slide" data-brand="JioHotstar" data-pushes="This Sunday? The King Plays.|One login. All moods.|Binge responsibly. Or not. We’re not cops." data-image="images/push notifications/push17.jpg">
+                        <img src="images/push notifications/push17.jpg" alt="JioHotstar Logo">
+                        <button class="slide-button" data-brand-name="JioHotstar">JioHotstar</button>
+                        <p class="slide-text">This Sunday? The King Plays.</p>
+                    </div>
+                    <div class="slide" data-brand="Letterboxd" data-pushes="Cinephiles, unite. Watch, rate, repeat.|This app is our diary. And yes, we overshare.|Fell in love with a movie character? Happens.|Logging sadness as 5 stars. Art.|We miss your One-Line Reviews." data-image="images/push notifications/push18.jpg">
+                        <img src="images/push notifications/push18.jpg" alt="Letterboxd Logo">
+                        <button class="slide-button" data-brand-name="Letterboxd">Letterboxd</button>
+                        <p class="slide-text">Cinephiles, unite. Watch, rate, repeat.</p>
+                    </div>
+                    <div class="slide" data-brand="Magicpin" data-pushes="Deals so good, they fix your pocket.|Swipe. Save. Smile.|Your wallet’s new BFF.|Offers that feel like validation." data-image="images/push notifications/push19.jpg">
+                        <img src="images/push notifications/push19.jpg" alt="Magicpin Logo">
+                        <button class="slide-button" data-brand-name="Magicpin">Magicpin</button>
+                        <p class="slide-text">Deals so good, they fix your pocket.</p>
+                    </div>
+                    <div class="slide" data-brand="Man Matters" data-pushes="Hair fall? We hear you.|No shame in self-care.|Your glow-up is what we look forward to." data-image="images/push notifications/push20.jpg">
+                        <img src="images/push notifications/push20.jpg" alt="Man Matters Logo">
+                        <button class="slide-button" data-brand-name="Man Matters">Man Matters</button>
+                        <p class="slide-text">Hair fall? We hear you.</p>
+                    </div>
+                    <div class="slide" data-brand="Netflix" data-pushes="Break up with boredom. Netflix is the rebound you deserve.|That twist? Yeah we gasped too.|A binge buddy? You have Us. Unlimited entertainment for you.|You can just never get enough of Cricket. Watch IND v PAK : The Greatest Rivalry. Streaming now on Netflix." data-image="images/push notifications/push21.jpg">
+                        <img src="images/push notifications/push21.jpg" alt="Netflix Logo">
+                        <button class="slide-button" data-brand-name="Netflix">Netflix</button>
+                        <p class="slide-text">Break up with boredom. Netflix is the rebound you deserve.</p>
+                    </div>
+                    <div class="slide" data-brand="NYT Games" data-pushes="Wordle is your new morning person.|Solve it. Or rage quit. It’s love either way.|One word. One win. One flex.|Mental gym but cooler." data-image="images/push notifications/push22.jpg">
+                        <img src="images/push notifications/push22.jpg" alt="NYT Games Logo">
+                        <button class="slide-button" data-brand-name="NYT Games">NYT Games</button>
+                        <p class="slide-text">Wordle is your new morning person.</p>
+                    </div>
+                    <div class="slide" data-brand="Ola" data-pushes="Your escape plan is en route.|Out of this place. Literally.|Traffic? Meh. We’re still faster than your last situationship.|Ride now. Think later." data-image="images/push notifications/push23.jpg">
+                        <img src="images/push notifications/push23.jpg" alt="Ola Logo">
+                        <button class="slide-button" data-brand-name="Ola">Ola</button>
+                        <p class="slide-text">Your escape plan is en route.</p>
+                    </div>
+                    <div class="slide" data-brand="Oyo" data-pushes="Need a break from your colleagues? We’ll book it.|New room. New perspective.|Stays with no judgment." data-image="images/push notifications/push24.jpg">
+                        <img src="images/push notifications/push24.jpg" alt="Oyo Logo">
+                        <button class="slide-button" data-brand-name="Oyo">Oyo</button>
+                        <p class="slide-text">Need a break from your colleagues? We’ll book it.</p>
+                    </div>
+                    <div class="slide" data-brand="Picsart" data-pushes="Sad but aesthetic?|Edit the chaos. Frame the feelings.|Turn tears into digital art.|Filters can’t fix life. But they help." data-image="images/push notifications/push25.jpg">
+                        <img src="images/push notifications/push25.jpg" alt="Picsart Logo">
+                        <button class="slide-button" data-brand-name="Picsart">Picsart</button>
+                        <p class="slide-text">Sad but aesthetic?</p>
+                    </div>
+                    <div class="slide" data-brand="Pinterest" data-pushes="Moodboards = visual therapy.|Dreams. Boards. Late-night spirals.|Manifest with pins.|Chaos but pretty." data-image="images/push notifications/push26.jpg">
+                        <img src="images/push notifications/push26.jpg" alt="Pinterest Logo">
+                        <button class="slide-button" data-brand-name="Pinterest">Pinterest</button>
+                        <p class="slide-text">Moodboards = visual therapy.</p>
+                    </div>
+                    <div class="slide" data-brand="Redbus" data-pushes="Runaway mode: ON.|Tickets to anywhere. Click Here.|New city. New story. New you.|Solo trip loading………" data-image="images/push notifications/push27.jpg">
+                        <img src="images/push notifications/push27.jpg" alt="Redbus Logo">
+                        <button class="slide-button" data-brand-name="Redbus">Redbus</button>
+                        <p class="slide-text">Runaway mode: ON.</p>
+                    </div>
+                    <div class="slide" data-brand="SonyLiv" data-pushes="Plot twists you didn’t see coming (nor did we). Watch Your Honor Now.|Watch what others missed. (We know you love Gatekeeping)|Under-rated gems live here.|ITS NOT ‘RIYA MERI GIRLFRIEND’. Watch Scam 1992 : The Harshad Mehta Story|We know you can’t eat without TMKOC ♥️" data-image="images/push notifications/push28.jpg">
+                        <img src="images/push notifications/push28.jpg" alt="SonyLiv Logo">
+                        <button class="slide-button" data-brand-name="SonyLiv">SonyLiv</button>
+                        <p class="slide-text">Plot twists you didn’t see coming (nor did we). Watch Your Honor Now.</p>
+                    </div>
+                    <div class="slide" data-brand="Udemy" data-pushes="Learn. Level up. Leave the drama behind.|Break over. It's time to Hustle.|New skills = new distraction.|Growth arc unlocked." data-image="images/push notifications/push29.jpg">
+                        <img src="images/push notifications/push29.jpg" alt="Udemy Logo">
+                        <button class="slide-button" data-brand-name="Udemy">Udemy</button>
+                        <p class="slide-text">Learn. Level up. Leave the drama behind.</p>
+                    </div>
+                    <div class="slide" data-brand="TVF Play" data-pushes="Dungeon Master or Dungeon_Master? Find Out.|Baba, you’re beautiful (you too, the one reading this).|We are more relatable than your group chat.|Did it before it was cool." data-image="images/push notifications/push30.jpg">
+                        <img src="images/push notifications/push30.jpg" alt="TVF Play Logo">
+                        <button class="slide-button" data-brand-name="TVF Play">TVF Play</button>
+                        <p class="slide-text">Dungeon Master or Dungeon_Master? Find Out.</p>
+                    </div>
+                    <div class="slide" data-brand="Urbanic" data-pushes="You wear the drama well.|Not just outfits. Statements.|Who needs closure when you’ve got couture?|Ex’s loss. Your look." data-image="images/push notifications/push31.jpg">
+                        <img src="images/push notifications/push31.jpg" alt="Urbanic Logo">
+                        <button class="slide-button" data-brand-name="Urbanic">Urbanic</button>
+                        <p class="slide-text">You wear the drama well.</p>
+                    </div>
+                    <div class="slide" data-brand="Zostel" data-pushes="Backpack. Breathe. Begin again.|Strangers who become stories.|Find yourself where the wifi sucks.|Your reset button is here." data-image="images/push notifications/push32.jpg">
+                        <img src="images/push notifications/push32.jpg" alt="Zostel Logo">
+                        <button class="slide-button" data-brand-name="Zostel">Zostel</button>
+                        <p class="slide-text">Backpack. Breathe. Begin again.</p>
+                    </div>
+                    <div class="slide" data-brand="Canva" data-pushes="You’re a designer now. Congrats.|Slides? Posters? Emotions? All editable.|We see your late night design hustle." data-image="images/push notifications/push33.jpg">
+                        <img src="images/push notifications/push33.jpg" alt="Canva Logo">
+                        <button class="slide-button" data-brand-name="Canva">Canva</button>
+                        <p class="slide-text">You’re a designer now. Congrats.</p>
+                    </div>
+                    <div class="slide" data-brand="Blinkit" data-pushes="Need it now? We’re outside.|Left your cart like your ex left you? Cold and incomplete. Let’s fix that|Your cravings just DM’d us. We replied that we’re coming.|Panic snacks delivered." data-image="images/push notifications/push34.jpg">
+                        <img src="images/push notifications/push34.jpg" alt="Blinkit Logo">
+                        <button class="slide-button" data-brand-name="Blinkit">Blinkit</button>
+                        <p class="slide-text">Need it now? We’re outside.</p>
+                    </div>
+                    <div class="slide" data-brand="Dominos" data-pushes="Pizza understands.|Extra cheese = extra happinesssss.|Long time, no see. How’s Life without Pizza?" data-image="images/push notifications/push35.jpg">
+                        <img src="images/push notifications/push35.jpg" alt="Dominos Logo">
+                        <button class="slide-button" data-brand-name="Dominos">Dominos</button>
+                        <p class="slide-text">Pizza understands.</p>
+                    </div>
+                    <div class="slide" data-brand="BookMyShow" data-pushes="Escape reality. Book a ticket.|Concerts. Movies. Distractions.|Seats filling faster than your tolerance.|Experience over explanations." data-image="images/push notifications/push36.jpg">
+                        <img src="images/push notifications/push36.jpg" alt="BookMyShow Logo">
+                        <button class="slide-button" data-brand-name="BookMyShow">BookMyShow</button>
+                        <p class="slide-text">Escape reality. Book a ticket.</p>
+                    </div>
+                    <div class="slide" data-brand="5-Star (by Blinkit / Zepto)" data-pushes="Nothing to do? Eat this.|Silence your thoughts with caramel." data-image="images/push notifications/push37.jpg">
+                        <img src="images/push notifications/push37.jpg" alt="5-Star Logo">
+                        <button class="slide-button" data-brand-name="5-Star (by Blinkit / Zepto)">5-Star (by Blinkit / Zepto)</button>
+                        <p class="slide-text">Nothing to do? Eat this.</p>
+                    </div>
+                    <div class="slide" data-brand="Snickers (by Blinkit / Zepto)" data-pushes="Not you when you’re hungry.|H/Angry? Eat a Snickers.|Fight with bae? Fix it with nuts.|Your sass has a snack now." data-image="images/push notifications/push38.jpg">
+                        <img src="images/push notifications/push38.jpg" alt="Snickers Logo">
+                        <button class="slide-button" data-brand-name="Snickers (by Blinkit / Zepto)">Snickers (by Blinkit / Zepto)</button>
+                        <p class="slide-text">Not you when you’re hungry.</p>
+                    </div>
+                    <div class="slide" data-brand="Red Bull" data-pushes="Fly out of it.|Wings > words.|Mood low? Caffeine high." data-image="images/push notifications/push39.jpg">
+                        <img src="images/push notifications/push39.jpg" alt="Red Bull Logo">
+                        <button class="slide-button" data-brand-name="Red Bull">Red Bull</button>
+                        <p class="slide-text">Fly out of it.</p>
+                    </div>
+                    <div class="slide" data-brand="Burger King" data-pushes="Whopper your worries away.|Big bites. Bigger mood shifts.|You’re one burger away from better.|Crave it. Claim it." data-image="images/push notifications/push40.jpg">
+                        <img src="images/push notifications/push40.jpg" alt="Burger King Logo">
+                        <button class="slide-button" data-brand-name="Burger King">Burger King</button>
+                        <p class="slide-text">Whopper your worries away.</p>
+                    </div>
+                    <div class="slide" data-brand="McDonald's" data-pushes="I’m lovin’ it : That’s what she said (Haha).|McAloo Tikki for the soul.|Old love: McFlurry." data-image="images/push notifications/push41.jpg">
+                        <img src="images/push notifications/push41.jpg" alt="McDonald's Logo">
+                        <button class="slide-button" data-brand-name="McDonald's">McDonald's</button>
+                        <p class="slide-text">I’m lovin’ it : That’s what she said (Haha).</p>
+                    </div>
+<a class="prev" onclick="plusSlides(-1, 'push-notification-slideshow')" style="left: 0px;">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'push-notification-slideshow')" style="right: 0px;">&#10095;</a>
+                </div>
+            </div>
+        </section>
+        <section id="brand-campaigns" class="section">
+            <div class="container">
+                <h2 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; text-align: center; font-weight: bold; animation: fadeIn 1s ease, slideInDown 0.5s ease-out;">Brand Campaigns</h2>
+                <p style="font-size: 1.2em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: center; padding: 0 10%; animation: fadeIn 1s ease 0.5s;">“If I had 60 seconds of your attention, I’d sell you an emotion.” These are ads I wish existed. Some might never be made, and some should’ve been already. OGs vs GenZ, Ranbir vs Aamir, Letterboxd meltdown, Abhijeet from CID with anger issues. My head’s a cinema hall and these campaigns are my trailers.</p>
+                <div class="slideshow-container vertical" id="brand-campaigns-slideshow">
+                    <div class="slide" data-brand="Dummy AD film Script for fwd by Myntra" data-pushes="‘Dummy AD film Script for fwd by Myntra’ 
+
+                    Title: “OGs Never Go Out of Style” 
+                    
+                    [OPENING SHOT] A dusty old library. Soft sunlight. Calm silence. Camera zooms in slowly on a worn-out copy of Crime & Punishment.
+                    
+                    [CAMERA PANS OUT] We see all four AIB members sitting separately, deep in books: 
+                    
+                    Tanmay Bhat reading “Crime & Punishment”
+                    
+                    Gursimran Khamba reading “Comedy is for Dummies”
+                    
+                    Rohan reading “The Guide to going Viral”
+                    
+                    Ashish Shakya just flipping through a blank notebook titled “Comeback Plans”
+                    
+                    They look older, sharper like retired thieves planning one last heist. 
+                    
+                    [ENTER: HYPED GEN Z INSTAGRAM INFLUENCER with bright outfit, chaotic energy]
+                    
+                    Influencer (loud): “Waittt.. AIB??? BACK TOGETHER???” 
+                    
+                    All AIB boys look at him weirdly. Then at each other. 
+                    Rohan (dry): “In a library?” 
+                    Tanmay: “Not everything’s a reunion vlog..” 
+                    (Ashish: “Or a thumbnail with ‘You won’t believe who’s back!’”) 
+                    
+                    Influencer (sarcastic tone): “Yeah yeah ‘AIB was wayyy ahead of their time’ I’ve heard the legend.” 
+                    Ashish (grinning): “We kinda were. We started podcasting before it was cool.”
+                    
+                    Khamba: “Brought every celebrity to YouTube before influencers knew what a ‘collab’ (does air quotes) was.”
+                    
+                    Tanmay (sad flex): “And got an FIR before cancel culture was even born.”
+                    
+                    Influencer: “FR!” 
+                    
+                    Ashish (alarmed): “Again?!” 
+                    
+                    Influencer: “No no, For real, bro. F.R.” 
+                    
+                    Ashish (trauma flashback): Ah yeah FIR still stings. One Knockout, and boom and nationwide coverage.” 
+                    
+                    Beat. Awkward silence. Tanmay coughs.
+                    
+                    Influencer (pointing to Rohan’s book): “BTW (Bee Tee Dublew) wanna go viral today? Just drop a GRWM with a trending audio. Boom!” 
+                    
+                    Khamba (side-eyes): “We had to build and shut down a whole company to go viral. These kids get it easy.” 
+                    
+                    Influencer (trying to roast): “FYI this drip is not giving. You guys need a whole new vibe.” 
+                    
+                    Tanmay (standing up): “Don’t need customizable clothes anymore. I am fit now.” 
+                    
+                    the voiceover kicks in, all four AIB guys are now seen in dripped-out, stylish, GenZ-style outfits styled by fwd by Myntra. 
+                    
+                    Voice over : “Some things never go out of style. Some just need a fresh fit.” “fwd by Myntra - bridging the gap between generations.” 
+                    
+                    Khamba (checking his new outfit): “Wait, this is Myntra?” 
+                    Rohan : “No bro. This is fwd.” 
+                    
+                    They both nod like it's deep. 
+                    Tanmay takes a selfie, police siren sounds faint again. 
+                    Ashish (nervous): “That better be the trend alert... not a Police Jeep.” 
+                    
+                    CUT TO BLACK. LOGO OUTRO : fwd by Myntra where OG meets Genz
+                    " data-image="images/Brand Campaigns/brand1.jpg">
+                        <img src="images/Brand Campaigns/brand1.jpg" alt="Dummy AD film Script for fwd by Myntra">
+                        <button class="slide-button" data-brand-name="Dummy AD film Script for fwd by Myntra">Dummy AD film Script for fwd by Myntra</button>
+                    </div>
+                    <div class="slide" data-brand="Fevicol (Sharma Ki Dulhan Contd.)" data-pushes="Title : Stuck in the Song
+                    Concept : A musical universe where every time someone tries to sing the full ‘Sharma ki dulhan’ song they literally get stuck in a loop.
+                    Not metaphorically.
+                    Time freezes.
+                    
+                    The people can’t move. The world pauses.
+                    Because the lyrics can’t move beyond.
+                    The world’s most "stuck" song, powered by the world’s strongest "jod".
+                    
+                    Ad : We open on a desi wedding sangeet, full of lights and colors.
+                    The groom’s friend grabs the mic:
+                    “Sharma ki dulhan, jo byaahe ke aayi. Sang 2 Seater”
+                    Cut.
+                    Everything freezes.
+                    The groom’s hand is in the air.
+                    The bride’s family is stuck mid-twirl.
+                    A laddu is floating mid-air near someone’s mouth.
+                    
+                    (voiceover):
+                    “Chipak gaya?”
+                    We cut to:
+                    A college band jamming in a studio.
+                    They hit the line:
+                    “Sharma ki dulhan, jo byaahe ke aayi. Sang 2 Seater”
+                    Guitarist’s pick freezes in mid-air.
+                    (voiceover):
+                    “Kyonki Kuch Jod Nahi Hilte.
+                    Fevicol. 60 Saal se wahi jod”
+                    
+                    Ends with the camera still on the sofa, it is still in perfect condition.
+                    
+                    (Spotify ad idea: Plays only the first two lines of the song, then silence.)
+                    " data-image="images/Brand Campaigns/brand2.jpg">
+                        <img src="images/Brand Campaigns/brand2.jpg" alt="Fevicol (Sharma Ki Dulhan Contd.)">
+                        <button class="slide-button" data-brand-name="Fevicol (Sharma Ki Dulhan Contd.)">Fevicol (Sharma Ki Dulhan Contd.)</button>
+                    </div>
+                <div class="slide" data-brand="Dream 11 (IPL Campaign : Aamir 11 vs Ranbir 11)" data-pushes="Ad : 
+                Aamir is sitting at the head of the table, he’s serious, focused.
+                Ranbir is lounging with sunglasses, sipping cold brew.
+                Aamir (serious):
+                “KL, Ashwin, Rohit sab tere paas hai
+                (flaunting)par Bumrah, SKY, Hardik woh toh mere hain.”
+                Ranbir (grinning):
+                “Bas karo Laal Singh itna bhaag ke bhi selection accha nahi hua.”
+                (smirks)
+                Aamir (mock offended):
+                “Chhoti team banana meri aadat nahi hai Ranveer
+                Ranbir (serious) : RANBIR! 
+                Aamir (laughs):
+                “Naam yaad rakhne se team nahi banti.”
+                Ranbir (laughs):
+                “Apko kya tension hai? Last baar thugs of hindustan cast karli thi
+                isko team banana bolte hai kya?”
+                Suddenly DOOR SLAMS.
+                Sanjiv Goenka storms in with scorecards, tablet, headphones.
+                Sanjiv Goenka (calm but deadly):
+                "Camera mujh par zyada gaya,
+                par points in dono ke paas zyada hai"
+                looks at both
+                “Aap log fantasy khel rahe ho aur mai camerman ke sath”
+                walks out slowly, calls his assistant
+                (angry)
+                “YE CAMERAMAN KON HAI???”
+                (voiceover):
+                "Kisi ke liye game. Kisi ke liye dharam yudh."
+                 "Aapki team mein kaun hai?"
+                 Dream11 “Yeh Apna Game Hai”.
+                " data-image="images/Brand Campaigns/brand3.jpg">
+                    <img src="images/Brand Campaigns/brand3.jpg" alt="Dream 11 (IPL Campaign : Aamir 11 vs Ranbir 11)">
+                    <button class="slide-button" data-brand-name="Dream 11 (IPL Campaign : Aamir 11 vs Ranbir 11)">Dream 11 (IPL Campaign : Aamir 11 vs Ranbir 11)</button>
+                </div>
+                <div class="slide" data-brand="The Beef is Real : Burger King Vs McDonalds" data-pushes="Title : “The Beef is Real : Burger King Vs McDonalds”
+
+                Concept : 
+                Global mockumentary-style ad, inspired by Drive to Survive & The Last Dance.
+                
+                Ad : 
+                This is not just a burger rivalry. This is the Super Bowl of Sass, the Champions League of Condiments, the Oscars of Onions.
+                Opening : 
+                High-stakes trailer music builds
+                -McDonald's golden arches glowing like a cult symbol
+                -Burger King’s crown lowered onto a mannequin head in slow motion
+                -Footage of a McDelivery guy and a BK rider arriving at the same house  both stare each other down, holding their paper bags like briefcases.
+                
+                
+                Cut :
+                Fake documentary interviews
+                McDonald's Global Brand Manager (mock serious) : “We’ve been flipping since 1955. The world chose us. And then they dropped (pauses) the King?”
+                Burger King Strategist :
+                “We don’t do basic. We flame-grill. We stack. We intimidate.”
+                Cut :
+                Press Conference : 
+                Red carpet. Popcorn. Blinding lights.
+                -A lifesize Ronald McDonald stands at the podium
+                -Opposite him : a smug, full-suited Burger King mascot in shades
+                -They're flanked by fans in red & yellow vs black & gold
+                
+                
+                
+                “Question to Ronald: Any thoughts on BK’s ‘Whopper is bigger’ campaign?”
+                Ronald (grinning):
+                “Overcompensation much?”
+                BK (coolly):
+                “At least we don’t send raw chicken to our customers.”
+                Crowd: OHHHHHHHHHHHHHHH
+                
+                Cut :
+                Packaging Sabotage Montage
+                -Someone slipping a crown sticker into a McD bag
+                -Ronald secretly ordering a Whopper for “quality testing”
+                
+                
+                Last Scene :
+                Voiceover (cinematic tone) :
+                “Two empires. One appetite. The beef’s been cooking for decades.”
+                “Pick a side. Or pick both. We won’t judge.”
+                
+                 McDonald’s x Burger King — Streaming nowhere. Eaten everywhere.
+                " data-image="images/Brand Campaigns/brand4.jpg">
+                    <img src="images/Brand Campaigns/brand4.jpg" alt="The Beef is Real : Burger King Vs McDonalds">
+                    <button class="slide-button" data-brand-name="The Beef is Real : Burger King Vs McDonalds">The Beef is Real : Burger King Vs McDonalds</button>
+                </div>
+                <div class="slide" data-brand="Snickers" data-pushes="[CID INTERROGATION ROOM]
+                Dark room.
+                Bright light on a suspicious looking suspect.
+                Abhijeet (Aditya Srivastava) pacing around the room, arms behind his back.
+                He’s clearly annoyed.
+                The suspect keeps talking nonsense.
+                Suspect (nervously fast-talking) :
+                “Sir, main toh bas samose khane gaya tha fir koi chilla raha tha… main waha gaya toh maine Daya sir ko dekha aur bhaagne ki koshish ki”
+                Abhijeet (getting frustrated, holding his head) : 
+                “Ek gaal par rehpta maara na, sadak par”
+                (Slow motion begins)
+                Daya tosses him a Snickers Bar 
+                Cut :
+                Abhijeet takes a bite.
+                Calms instantly.
+                Abhijeet (cool-headed, dramatic pause) :
+                “Chalo ab theek se batao. Pehle samose kitne ke the?”
+                Voiceover (CID-style):
+                "Hunger Ache Acho ko Badal Deta hai."
+                "Hungry? Grab a Snickers."
+                
+                
+                Final Frame :
+                Snickers logo + CID-style BGM.
+                " data-image="images/Brand Campaigns/brand5.jpg">
+                    <img src="images/Brand Campaigns/brand5.jpg" alt="Snickers">
+                    <button class="slide-button" data-brand-name="Snickers">Snickers</button>
+                </div>
+                <div class="slide" data-brand="Letterboxd (Your Top 4 is Showing)" data-pushes="Setting: Cannes Film Festival / Venice / Oscars Red Carpet
+
+                (Opening scene)
+                Black screen.
+                Cue dramatic score.
+                Text fades in:
+                “On the eve of the film festival there’s only one question that matters.”
+                Press Voiceover (whispers into mic) : 
+                “They’re not ready.”
+                (Scene: Red Carpet Mayhem)
+                A Letterboxd reporter (with the ‘everyone knows logo’) flashes a mic at a very nervous Timothée Chalamet.
+                Reporter (cheery) :
+                “Hey Timmy, real quick your Letterboxd Top 4?”
+                Chalamet (freezes) :
+                “Oh god I knew this was coming. Do I say Persona? Is that too obvious? I mean Paddington 2 changed me.”
+                
+                (Montage: Celebs spiraling)
+                Greta Gerwig whispering to Noah Baumbach:
+                “Can I say White Chicks unironically?”
+                Pedro Pascal:
+                “Is The Mummy (1999) a valid choice? Asking for a friend”
+                Ayo Edebiri, holding mic to herself:
+                “My top 4 rotates weekly based on anxiety levels.”
+                (Cut to : Behind the scenes)
+                -Publicists are running around screaming. 
+                -Someone’s Googling “Cool Criterion picks under 90 mins.”
+                -One dude yells, “Can’t I just list all of Wong Kar Wai?!”
+                
+                (Cut to : Billie Eilish on the carpet)
+                “I just said Coraline, In the Mood for Love, Fantastic Mr. Fox, and Shrek 2. I think I nailed it.”
+                (pan to internet melting down)
+                
+                (voiceover)
+                “Your favorite movies aren’t just movies.
+                 They’re vibes, personality tests, and a little window into your soul.”
+                
+                Final Frame:
+                Letterboxd logo appears
+                “Your Top 4 Is Showing.” Choose wisely.
+                " data-image="images/Brand Campaigns/brand7.jpg">
+                    <img src="images/Brand Campaigns/brand7.jpg" alt="Letterboxd (Your Top 4 is Showing)">
+                    <button class="slide-button" data-brand-name="Letterboxd (Your Top 4 is Showing)">Letterboxd (Your Top 4 is Showing)</button>
+                </div>
+                <div class="slide" data-brand="5 Star (Do Nothing, Like a Genius)" data-pushes="[Opening Scene]
+                A guy is slouched on his beanbag.
+                Hair’s a mess, remote is far, the room is full of random, stacked items.
+                He sees a 5-Star kept far on the shelf.
+                He sighs.
+                Cue slow-motion heist music
+                With the slightest toe movement, he nudges a marble.
+                Marble rolls knocks down a toothbrush
+                Toothbrush hits a book
+                Book flips a spoon
+                Spoon hits a ball
+                Ball rolls into a remote car
+                Car hits a hanging string
+                And BAM!
+                5-Star falls from the shelf straight into his hand.
+                He blinks once. Smiles.
+                Peels the wrapper takes a bite.
+                [Voiceover dry tone]:
+                “Most people do nothing out of laziness.”
+                “Some does it out of brilliance.”
+                Tagline appears:
+                Eat 5-Star. Do Nothing.
+                (last frame):
+                Asks his dog to throw the wrapper.
+                " data-image="images/Brand Campaigns/brand6.jpg">
+                    <img src="images/Brand Campaigns/brand6.jpg" alt="5 Star (Do Nothing, Like a Genius)">
+                    <button class="slide-button" data-brand-name="5 Star (Do Nothing, Like a Genius)">5 Star (Do Nothing, Like a Genius)</button>
+                </div>
+                    <a class="prev" onclick="plusSlides(-1, 'brand-campaigns-slideshow')">&#10096;</a>
+                    <a class="next" onclick="plusSlides(1, 'brand-campaigns-slideshow')">&#10097;</a>
+                </div>
+            </div>
+        
+            <div id="notificationModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h3 id="modal-brand-name"></h3>
+                    <div id="modal-logo" style="display: none;">
+                        <img id="modal-logo-img" src="" alt="">
+                    </div>
+                    <div id="modal-pushes">
+                        <p id="modal-push-list"></p>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <style>
+            #brand-campaigns h2 {
+                font-size: 2.5em;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                text-align: center;
+                font-weight: bold;
+                animation: fadeIn 1s ease, slideInDown 0.5s ease-out;
+            }
+        
+            #brand-campaigns p {
+                font-size: 1.2em;
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 0 10%;
+                animation: fadeIn 1s ease 0.5s;
+            }
+        
+            .slideshow-container.vertical {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 60%;
+                height: 500px;
+                margin: 20px auto;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        
+            .slideshow-container.vertical .slide {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        
+            .slideshow-container.vertical .slide img {
+                max-width: 80%;
+                max-height: 80%;
+                object-fit: contain;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+        
+            .slideshow-container.vertical .slide img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        
+            .slideshow-container.vertical .slide-text {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.2em;
+                color: #333;
+            }
+        
+            .slideshow-container.vertical .prev,
+            .slideshow-container.vertical .next {
+                cursor: pointer;
+                position: absolute;
+                width: auto;
+                padding: 16px;
+                font-size: 20px;
+                color: #333;
+                font-weight: bold;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                background-color: rgba(255, 255, 255, 0.7);
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+        
+            .slideshow-container.vertical .next {
+                right: 10px;
+                left: auto;
+                border-radius: 3px 0 0 3px;
+            }
+        
+            .slideshow-container.vertical .prev:hover,
+            .slideshow-container.vertical .next:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        
+            .slideshow-container.vertical .slide-button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-top: 15px;
+            }
+        
+            .slideshow-container.vertical .slide-button:hover {
+                background-color: #0056b3;
+            }
+        
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+        
+                to {
+                    opacity: 1;
+                }
+            }
+        
+            @keyframes slideInDown {
+                from {
+                    transform: translateY(-50px);
+                }
+        
+                to {
+                    transform: translateY(0);
+                }
+            }
+        
+            /* Modal Styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                border-radius: 10px;
+                position: relative;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        
+            .modal-close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                cursor: pointer;
+            }
+        
+            .modal-close:hover,
+            .modal-close:focus {
+                color: #000;
+                text-decoration: none;
+            }
+        
+            #modal-brand-name {
+                font-size: 1.8em;
+                color: #2c3e50;
+                margin-bottom: 15px;
+                text-align: center;
+                font-weight: bold;
+            }
+        
+            #modal-logo {
+                display: none;
+                /*width: 50%;*/
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+        
+            #modal-logo-img {
+                max-width: 100%;
+                max-height: 150px;
+                object-fit: contain;
+            }
+        
+            #modal-pushes {
+                font-size: 1.1em;
+                color: #333;
+                line-height: 1.7;
+            }
+        
+            #modal-push-list {
+                margin-top: 10px;
+                white-space: pre-wrap; /* Preserve line breaks */
+            }
+        </style>
+        <script>
+            let brandCampaignSlideIndex = 0;
+            let brandCampaignSlideshowInterval;
+            const brandCampaignSlideshowId = 'brand-campaigns-slideshow';
+        
+            showBrandCampaignSlides(brandCampaignSlideIndex, brandCampaignSlideshowId);
+            startBrandCampaignSlideshow(brandCampaignSlideshowId);
+        
+            // Store the scripts here
+            const brandCampaignScripts = {
+                "Dummy AD film Script for fwd by Myntra": `Dummy AD film Script for fwd by Myntra<br><br>Title: “OGs Never Go Out of Style”  <br><br>
+        [OPENING SHOT] A dusty old library. Soft sunlight. Calm silence. Camera zooms in slowly on a worn-out copy of Crime & Punishment.  <br><br>
+        [CAMERA PANS OUT] We see all four AIB members sitting separately, deep in books:  <br><br>
+        Tanmay Bhat reading “Crime & Punishment”<br><br>
+        Gursimran Khamba reading “Comedy is for Dummies”<br><br>
+        Rohan reading “The Guide to going Viral”<br><br>
+        Ashish Shakya just flipping through a blank notebook titled “Comeback Plans” <br><br>
+        They look older, sharper like retired thieves planning one last heist.  <br><br>
+        [ENTER: HYPED GEN Z INSTAGRAM INFLUENCER with bright outfit, chaotic energy] <br><br>
+        Influencer (loud): “Waittt.. AIB??? BACK TOGETHER???”  <br><br>
+        All AIB boys look at him weirdly. Then at each other.  <br><br>
+        Rohan (dry): “In a library?”  <br><br>
+        Tanmay: “Not everything’s a reunion vlog..”  <br><br>
+        (Ashish: “Or a thumbnail with ‘You won’t believe who’s back!’”)  <br><br>
+        Influencer (sarcastic tone): “Yeah yeah ‘AIB was wayyy ahead of their time’ I’ve heard the legend.”  <br><br>
+        Ashish (grinning): “We kinda were. We started podcasting before it was cool.” <br><br>
+        Khamba: “Brought every celebrity to YouTube before influencers knew what a ‘collab’ (does air quotes) was.” <br><br>
+        Tanmay (sad flex): “And got an FIR before cancel culture was even born.” <br><br>
+        Influencer: “FR!”  <br><br>
+        Ashish (alarmed): “Again?!”  <br><br>
+        Influencer: “No no, For real, bro. F.R.”  <br><br>
+        Ashish (trauma flashback): “Ah yeah FIR still stings. One Knockout, and boom and nationwide coverage.”  <br><br>
+        Beat. Awkward silence. Tanmay coughs. <br><br>
+        Influencer (pointing to Rohan’s book): “BTW (Bee Tee Dublew) wanna go viral today? Just drop a GRWM with a trending audio. Boom!”  <br><br>
+        Khamba (side-eyes): “We had to build and shut down a whole company to go viral. These kids get it easy.”  <br><br>
+        Influencer (trying to roast): “FYI this drip is not giving. You guys need a whole new vibe.”  <br><br>
+        Tanmay (standing up): “Don’t need customizable clothes anymore. I am fit now.”  <br><br>
+        the voiceover kicks in, all four AIB guys are now seen in dripped-out, stylish, GenZ-style outfits styled by fwd by Myntra.  <br><br>
+        Voice over : “Some things never go out of style. Some just need a fresh fit.” “fwd by Myntra - bridging the gap between generations.”  <br><br>
+        Khamba (checking his new outfit): “Wait, this is Myntra?”  <br><br>
+        Rohan : “No bro. This is fwd.”  <br><br>
+        They both nod like it's deep.  <br><br>
+        Tanmay takes a selfie, police siren sounds faint again.  <br><br>
+        Ashish (nervous): “That better be the trend alert... not a Police Jeep.”  <br><br>
+        CUT TO BLACK. LOGO OUTRO : fwd by Myntra where OG meets Genz`,
+                "Fevicol (Sharma Ki Dulhan Contd.)": `Fevicol (Sharma Ki Dulhan Contd.) <br><br> Title : Stuck in the Song <br> Concept : A musical universe where every time someone tries to sing the full ‘Sharma ki dulhan’ song they literally get stuck in a loop. Not metaphorically. Time freezes. The people can’t move. The world pauses. Because the lyrics can’t move beyond. The world’s most "stuck" song, powered by the world’s strongest "jod". Ad : We open on a desi wedding sangeet, full of lights and colors. The groom’s friend grabs the mic: “Sharma ki dulhan, jo byaahe ke aayi. Sang 2 Seater” Cut. Everything freezes. The groom’s hand is in the air. The bride’s family is stuck mid-twirl. A laddu is floating mid-air near someone’s mouth. (voiceover): “Chipak gaya?” We cut to: A college band jamming in a studio. They hit the line: “Sharma ki dulhan, jo byaahe ke aayi. Sang 2 Seater” Guitarist’s pick freezes in mid-air. (voiceover): “Kyonki Kuch Jod Nahi Hilte. Fevicol. 60 Saal se wahi jod” Ends with the camera still on the sofa, it is still in perfect condition. (Spotify ad idea: Plays only the first two lines of the song, then silence.)`
+            };
+        
+            function showBrandCampaignSlides(n, slideshowId) {
+                let i;
+                let slides = document.getElementById(slideshowId).getElementsByClassName("slide");
+        
+                if (n > slides.length) {
+                    brandCampaignSlideIndex = 1
+                }
+                if (n < 1) {
+                    brandCampaignSlideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                if (slides && slides[brandCampaignSlideIndex - 1]) {
+                    slides[brandCampaignSlideIndex - 1].style.display = "flex";
+                }
+            }
+        
+            function plusBrandCampaignSlides(n, slideshowId) {
+                clearInterval(brandCampaignSlideshowInterval);
+                brandCampaignSlideIndex += n;
+                showBrandCampaignSlides(brandCampaignSlideIndex, slideshowId);
+                startBrandCampaignSlideshow(slideshowId);
+            }
+        
+            function startBrandCampaignSlideshow(slideshowId) {
+                brandCampaignSlideshowInterval = setInterval(() => {
+                    plusBrandCampaignSlides(1, slideshowId);
+                }, 5000);
+            }
+        
+        
+            document.querySelectorAll('.slide-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const brandName = this.getAttribute('data-brand-name');
+        
+                    const modal = document.getElementById("notificationModal");
+                    const modalClose = document.querySelector(".modal-close");
+                    const modalBrandName = document.getElementById("modal-brand-name");
+                    const modalLogo = document.getElementById("modal-logo");
+                    const modalPushes = document.getElementById("modal-pushes");
+                    const modalPushList = document.getElementById("modal-push-list");
+        
+        
+                    modalBrandName.textContent = brandName;
+                    modalLogo.style.display = "none";
+                    modalPushList.innerHTML = `<p style="white-space: pre-wrap;">${brandCampaignScripts[brandName]}</p>`;  // Corrected line
+        
+        
+                    modal.style.display = "flex";
+                    modalClose.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+        
+                });
+            });
+        </script>
+        
+        <section id="email-copies" class="section">
+            <div class="container">
+                <h2 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; text-align: center; font-weight: bold; animation: fadeIn 1s ease, slideInDown 0.5s ease-out;">Email Copy (Samples)</h2>
+                <p style="font-size: 1.2em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: center; padding: 0 10%; animation: fadeIn 1s ease 0.5s;">“🐕, Sorry my dog accidentally entered your mail inbox” This is me learning the art of persuasion, one subject line at a time. Emails that welcome you, convince you, panic you with deadlines, and haunt your dreams (until you hit ‘Buy Now’). You’ll laugh, click, and maybe reply with “who’s your copywriter?”</p>
+                <div class="slideshow-container vertical" id="email-copies-slideshow">
+                    <div class="slide" data-email="Email #1 : Welcome Email" data-pushes="Email #1
+                    (Welcome Email)
+                    Brand : Canva
+                    Subject : Unleash Your Inner Creativity.
+                    Hey XYZ,
+Congratulations!! You’ve officially signed up.
+Now the only question is  “What the hell do you even design first?”
+We get it.
+Canva’s got templates for everything.
+And that can feel like you walked into a buffet.
+You’re not “bad at design.”
+You just didn’t have Canva till now.
+[Start Creating]
+Your blank canvas is waiting.
+Make it scroll-stopping.
+Make it stupidly cool.
+Just make it (We know you will).
+Team Canva
+" data-image="images/Email Copies/email1.jpg">
+                        <img src="images/Email Copies/email1.jpg" alt="Email #1 : Welcome Email">
+                        <button class="slide-button" data-email-name="Email #1 : Welcome Email">Email #1 : Welcome Email</button>
+                    </div>
+                    <div class="slide" data-email="Email #2 : Product Aware Email" data-pushes="Email #2
+                    (Product Aware Email)
+                    
+                    Brand : Man Matters
+                    Subject : Losing hair? It’s not just you, it’s everyone.
+                    Hey ZYX,
+Let’s be honest. Watching your hairline inch backward feels personal. 
+And when the shower drain becomes your worst enemy? That’s when it hits.
+But here’s the truth 
+You’re not alone.
+More than 80% of Indian men face hair fall by age 30.
+The problem isn’t you. The problem is ignoring it.
+Now comes the solution.
+✅ Dermat-approved ingredients
+✅ Zero harmful chemicals
+✅ Delivered discreetly to your door
+✅ Backed by science, not superstition
+And the best part?
+No need to leave your couch or awkwardly explain your hair oil collection.
+Start your Hair Health Journey Today
+[Start Your Plan Now] 
+Let’s not wait for “too late.”
+Let’s fix it now the right way.
+Stay strong (and stay styled),
+Team Man Matters
+" data-image="images/Email Copies/email2.jpg">
+                        <img src="images/Email Copies/email2.jpg" alt="Email #2 : Product Aware Email">
+                        <button class="slide-button" data-email-name="Email #2 : Product Aware Email">Email #2 : Product Aware Email</button>
+                    </div>
+                    <div class="slide" data-email="Email #3 : Deadline Sequence" data-pushes="Email #3
+                    (Deadline Sequence)
+                    Brand : Urbanic
+                    Subject : Only 48 Hours. Your Closet’s Begging.
+                    Hey XYZ,
+⏳ Fashion waits for no one. Especially not when the clock is ticking.
+Urbanic’s biggest sale of the season is live for 48 hours only.
+
+✨ Still thinking about it?
+ That top you eyed yesterday? It’s already in someone else’s cart 👀
+Tap below and take your style personally.
+👉 [SHOP NOW]
+You’ve got taste. We’ve got deals. But not for long. 🖤
+
+ - Stay cute, Team Urbanic
+" data-image="images/Email Copies/email3.jpg">
+                        <img src="images/Email Copies/email3.jpg" alt="Email #3 : Deadline Sequence">
+                        <button class="slide-button" data-email-name="Email #3 : Deadline Sequence">Email #3 : Deadline Sequence</button>
+                    </div>
+                    <div class="slide" data-email="Email #4 : Abandoned Cart Email" data-pushes="Email #4
+                    (Abandoned Cart Email)
+                    Brand : Swiggy Instamart
+                    Subject : You left us hanging like that lonely banana 🥲 
+                    Hey XYZ, 
+We noticed you left a few goodies behind. Your groceries? Still waiting.
+The milk’s losing hope. The banana’s contemplating life.
+
+👉 [Return to Cart]
+No guilt. No pressure. Just snacks and satisfaction.
+Also, that banana? Still available.
+With love and paneer,
+Team Instamart" data-image="images/Email Copies/email4.jpg">
+                        <img src="images/Email Copies/email4.jpg" alt="Email #4 : Abandoned Cart Email">
+                        <button class="slide-button" data-email-name="Email #4 : Abandoned Cart Email">Email #4 : Abandoned Cart Email</button>
+                    </div>
+                    <div class="slide" data-email="Email #5 : Retargeting Sequence" data-pushes="Email #5
+                    (Retargeting Sequence)
+                    Brand : Netflix
+                    Subject : Your Netflix account misses you.
+                    Hey ZYX,
+
+It’s been a while 👀
+The snacks miss you. The binge streak misses you. Heck, even the “Skip Intro” button is feeling abandoned.
+You left us hanging in the middle of Season 2, we didn’t skip ahead, promise.
+
+No pressure, but we saved your spot.
+[Resume Watching]
+
+Still unsure? Log in and see what’s trending, no strings attached.
+Just pure, unskippable entertainment.
+❤️,Team Netflix
+" data-image="images/Email Copies/email5.jpg">
+                        <img src="images/Email Copies/email5.jpg" alt="Email #5 : Retargeting Sequence">
+                        <button class="slide-button" data-email-name="Email #5 : Retargeting Sequence">Email #5 : Retargeting Sequence</button>
+                    </div>
+                    <div class="slide" data-email="Email #6 : Abandoned Cart Email" data-pushes="Email #6
+                    (Abandoned Cart Email)
+                    Subject : Your mom said no but your heart said yes
+                    
+                    Hey,
+                    We get it. Life gets busy. But your cart?
+                    It's been crying in the corner, wondering what it did wrong.
+                    Even your mom walked by and said:
+                    ‘Ro mat le le!’
+                    So here we are. One last time.
+                    With love, your forgotten cart. 💔
+                    [Take Me Back]
+                    " data-image="images/Email Copies/email6.jpg">
+                        <img src="images/Email Copies/email6.jpg" alt="Email #6 : Abandoned Cart Email">
+                        <button class="slide-button" data-email-name="Email #6 : Abandoned Cart Email">Email #6 : Abandoned Cart Email</button>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'email-copies-slideshow')">&#10096;</a>
+                    <a class="next" onclick="plusSlides(1, 'email-copies-slideshow')">&#10097;</a>
+                </div>
+            </div>
+            <div id="notificationModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h3 id="modal-brand-name"></h3>
+                    <div id="modal-logo" style="display: none;">
+                        <img id="modal-logo-img" src="" alt="">
+                    </div>
+                    <div id="modal-pushes">
+                        <p id="modal-push-list"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            #email-copies h2 {
+                font-size: 2.5em;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                text-align: center;
+                font-weight: bold;
+                animation: fadeIn 1s ease, slideInDown 0.5s ease-out;
+            }
+        
+            #email-copies p {
+                font-size: 1.2em;
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 0 10%;
+                animation: fadeIn 1s ease 0.5s;
+            }
+        
+            .slideshow-container.vertical {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 60%;
+                height: 500px;
+                margin: 20px auto;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        
+            .slideshow-container.vertical .slide {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        
+            .slideshow-container.vertical .slide img {
+                max-width: 80%;
+                max-height: 80%;
+                object-fit: contain;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+        
+            .slideshow-container.vertical .slide img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        
+            .slideshow-container.vertical .slide-text {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.2em;
+                color: #333;
+            }
+        
+            .slideshow-container.vertical .prev,
+            .slideshow-container.vertical .next {
+                cursor: pointer;
+                position: absolute;
+                width: auto;
+                padding: 16px;
+                font-size: 20px;
+                color: #333;
+                font-weight: bold;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                background-color: rgba(255, 255, 255, 0.7);
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+        
+            .slideshow-container.vertical .next {
+                right: 10px;
+                left: auto;
+                border-radius: 3px 0 0 3px;
+            }
+        
+            .slideshow-container.vertical .prev:hover,
+            .slideshow-container.vertical .next:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        
+            .slideshow-container.vertical .slide-button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-top: 15px;
+            }
+        
+            .slideshow-container.vertical .slide-button:hover {
+                background-color: #0056b3;
+            }
+        
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+        
+                to {
+                    opacity: 1;
+                }
+            }
+        
+            @keyframes slideInDown {
+                from {
+                    transform: translateY(-50px);
+                }
+        
+                to {
+                    transform: translateY(0);
+                }
+            }
+        
+            /* Modal Styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                border-radius: 10px;
+                position: relative;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        
+            .modal-close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                cursor: pointer;
+            }
+        
+            .modal-close:hover,
+            .modal-close:focus {
+                color: #000;
+                text-decoration: none;
+            }
+        
+            #modal-brand-name {
+                font-size: 1.8em;
+                color: #2c3e50;
+                margin-bottom: 15px;
+                text-align: center;
+                font-weight: bold;
+            }
+        
+            #modal-logo {
+                display: none;
+                /*width: 50%;*/
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+        
+            #modal-logo-img {
+                max-width: 100%;
+                max-height: 150px;
+                object-fit: contain;
+            }
+        
+            #modal-pushes {
+                font-size: 1.1em;
+                color: #333;
+                line-height: 1.7;
+            }
+        
+            #modal-push-list {
+                margin-top: 10px;
+                white-space: pre-wrap;
+            }
+        </style>
+        <script>
+            let emailCopiesSlideIndex = 0;
+            let emailCopiesSlideshowInterval;
+            const emailCopiesSlideshowId = 'email-copies-slideshow';
+        
+            const emailScripts = {
+                "Email #1 : Welcome Email": `(Welcome Email)<br>Brand: Canva<br>Subject: Unleash Your Inner Creativity.<br><br>Hey XYZ,<br><br>Congratulations!! You’ve officially signed up.<br><br>Now the only question is “What the hell do you even design first?”<br><br>We get it.<br>Canva’s got templates for everything.<br>And that can feel like you walked into a buffet.<br>You’re not “bad at design.”<br>You just didn’t have Canva till now.<br><br>[Start Creating]<br>Your blank canvas is waiting.<br>Make it scroll-stopping.<br>Make it stupidly cool.<br>Just make it (We know you will).<br><br>Team Canva.`,
+                "Email #2 : Product Aware Email": `(Product Aware Email)<br>Brand: Man Matters<br>Subject: Losing hair? It’s not just you, it’s everyone.<br><br>Hey ZYX,<br>Let’s be honest. Watching your hairline inch backward feels personal.<br>And when the shower drain becomes your worst enemy? That’s when it hits.<br>But here’s the truth<br>You’re not alone.<br>More than 80% of Indian men face hair fall by age 30.<br>The problem isn’t you. The problem is ignoring it.<br>Now comes the solution.<br>✅ Dermat-approved ingredients<br>✅ Zero harmful chemicals<br>✅ Delivered discreetly to your door<br>✅ Backed by science, not superstition<br>And the best part?<br>No need to leave your couch or awkwardly explain your hair oil collection.<br>Start your Hair Health Journey Today<br>[Start Your Plan Now]<br>Let’s not wait for “too late.”<br>Let’s fix it now the right way.<br>Stay strong (and stay styled),<br>Team Man Matters`,
+                "Email #3 : Deadline Sequence": `(Deadline Sequence)<br>Brand : Urbanic<br>Subject : Only 48 Hours. Your Closet’s Begging.<br><br>Hey XYZ,<br>⏳ Fashion waits for no one. Especially not when the clock is ticking.<br>Urbanic’s biggest sale of the season is live for 48 hours only.<br><br>✨ Still thinking about it?<br> That top you eyed yesterday? It’s already in someone else’s cart 👀<br>Tap below and take your style personally.<br>👉 [SHOP NOW]<br>You’ve got taste. We’ve got deals. But not for long. 🖤<br><br> - Stay cute, Team Urbanic`,
+                "Email #4 : Abandoned Cart Email": `(Abandoned Cart Email)<br>Brand : Swiggy Instamart<br>Subject : You left us hanging like that lonely banana 🥲<br><br>Hey XYZ, <br>We noticed you left a few goodies behind. Your groceries? Still waiting.<br>The milk’s losing hope. The banana’s contemplating life.<br><br>👉 [Return to Cart]<br>No guilt. No pressure. Just snacks and satisfaction.<br>Also, that banana? Still available.<br>With love and paneer,<br>Team Instamart`,
+                "Email #5 : Retargeting Sequence": `(Retargeting Sequence)<br>Brand : Netflix<br>Subject : Your Netflix account misses you.<br><br>Hey ZYX,<br><br>It’s been a while 👀<br>The snacks miss you. The binge streak misses you. Heck, even the “Skip Intro” button is feeling abandoned.<br>You left us hanging in the middle of Season 2, we didn’t skip ahead, promise.<br><br>No pressure, but we saved your spot.<br>[Resume Watching]<br><br>Still unsure? Log in and see what’s trending, no strings attached.<br>Just pure, unskippable entertainment.<br>❤️,Team Netflix`,
+                "Email #6 : Abandoned Cart Email": `(Abandoned Cart Email)<br>Brand : Snickers<br>Subject : Your mom said no but your heart said yes<br><br>Hey,<br>            We get it. Life gets busy. But your cart?<br>            It's been crying in the corner, wondering what it did wrong.<br>            Even your mom walked by and said:<br>            ‘Ro mat le le!’<br>            So here we are. One last time.<br>            With love, your forgotten cart. 💔<br>            [Take Me Back]`
+            };
+        
+            showEmailCopiesSlides(emailCopiesSlideIndex, emailCopiesSlideshowId);
+            startEmailCopiesSlideshow(emailCopiesSlideshowId);
+        
+            function showEmailCopiesSlides(n, slideshowId) {
+                let i;
+                let slides = document.getElementById(slideshowId).getElementsByClassName("slide");
+                if (n > slides.length) {
+                    emailCopiesSlideIndex = 1
+                }
+                if (n < 1) {
+                    emailCopiesSlideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[emailCopiesSlideIndex - 1].style.display = "flex";
+            }
+        
+            function plusSlides(n, slideshowId) {
+                clearInterval(emailCopiesSlideshowInterval);
+                emailCopiesSlideIndex += n;
+                showEmailCopiesSlides(emailCopiesSlideIndex, slideshowId);
+                startEmailCopiesSlideshow(slideshowId);
+            }
+        
+            function startEmailCopiesSlideshow(slideshowId) {
+                emailCopiesSlideshowInterval = setInterval(() => {
+                    plusSlides(1, slideshowId);
+                }, 5000);
+            }
+        
+            document.querySelectorAll('.slide-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const emailName = this.getAttribute('data-email-name');
+                    const modal = document.getElementById("notificationModal");
+                    const modalClose = document.querySelector(".modal-close");
+                    const modalBrandName = document.getElementById("modal-brand-name");
+                    const modalLogo = document.getElementById("modal-logo");
+                    const modalPushes = document.getElementById("modal-pushes");
+                    const modalPushList = document.getElementById("modal-push-list");
+        
+                    modalBrandName.textContent = emailName;
+                    modalLogo.style.display = "none";
+                    modalPushList.innerHTML = `<p style="white-space: pre-wrap;">${emailScripts[emailName]}</p>`;
+        
+                    modal.style.display = "flex";
+                    modalClose.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                });
+            });
+        </script>
+        
+        <section id="brainstorming" class="section">
+            <div class="container">
+                <h2 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; text-align: center; font-weight: bold; animation: fadeIn 1s ease, slideInDown 0.5s ease-out;">Brainstorming Campaigns</h2>
+                <p style="font-size: 1.2em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: center; padding: 0 10%; animation: fadeIn 1s ease 0.5s;">“Solutions, not just scrolls”
+                    Just me + my obsession with overthinking = unexpected solutions.
+                    </p>
+                <div class="slideshow-container vertical" id="brainstorming-slideshow">
+                    <div class="slide" data-brainstorm="Nice Try Diddy" data-pushes="1. “Nice Try Diddy” Solution
+
+                    The Problem: Every time a brand posts a sponsored ad on Instagram, each and every comment is: “Nice try, Diddy.”
+                    
+                    Translation :We see your ad. We're not buying it.
+                    It’s a Gen Z way of trolling, sarcastic resistance to aggressive marketing.
+                    And that hurts.
+                    
+                    Campaign Name : “Comment Bait” Series
+                    
+                    Ad Image:
+                    A pizza with “Nice Try, Diddy” written in pepperoni.
+                    Caption: Still not ordering? We tried. Again.
+                    
+                    
+                    Brand : Swiggy
+                    Caption “Mummy ki Kasam agar Nice Try, Diddy likha toh
+                    Paneer Butter Masala 2 mins mein wapas bhej denge”
+                    
+                    We Indians are emotional about “Mummy Ki Kasam”
+                    If it won’t work, it’ll still go viral. Will get free marketing.
+                    
+                    Zomato x Troll Whispering : 
+                    Caption : “Nice try, Diddy?
+                    We’re not Diddy. We’re the ones who knew you’d be hungry in 3…2…1…”
+                    
+                    Top Pinned Comment from Zomato : Nice Try Zomato.
+                    
+                    Reverse UNO Card
+                    Brand : Netflix India
+                    
+                    IG Reel (Sponsored Post for new show)
+                    Reel opens with someone typing: “Nice Try, Diddy.”
+                    screen freezes. UNO Reverse card 
+                    
+                     VO :
+                    “Arre bhai, Nice Try toh humne kiya tha.
+                    You scrolled. You stopped. You watched.
+                    Yeh Ad Sponsored Hai... Duniya Se.
+                    Brand : Myntra
+                    Post Type : Carousel
+                    
+                    Slide 1 : Yeh Ad Sponsored Hai
+                    Slide 2 : by heartbreak, low confidence, and not finding your size.
+                    
+                    Caption : “Nice try, Diddy? We heard that.
+                    Now go find something that actually fits who you are.
+                    " data-image="images/Brainstorm/brainstorm2.jpg">
+                        <img src="images/Brainstorm/brainstorm2.jpg" alt="Nice try Diddy">
+                        <button class="slide-button" data-brainstorm-name="Nice Try Diddy">Nice Try Diddy</button>
+                    </div>
+                    <div class="slide" data-brainstorm="Abandoned Cart or Job Application?" data-pushes= "Abandoned Cart or Job Application?
+The day I used a marketing funnel to market myself.
+
+The Backstory:
+While learning email marketing and copywriting, I stumbled across a question:
+“What’s the best way to understand abandoned cart emails?”
+Answer: Become the abandoned cart.
+
+So I did.
+I added Burger to my cart on Swiggy.
+Paneer Tikka Pizza on Zomato.
+Cold coffee and bananas on Blinkit.
+I even added almonds to make it look healthy.
+Then I walked away. No checkout. Just vibes.
+I waited.
+Nothing came. No “Your cart misses you.” No nudge. No reminder.
+
+[Experiment failed]
+
+But I was ready with an email, if they replied.
+Then I tweaked my email and here it is. 
+
+Subject: I know I left. But let me explain.
+
+Hey [Brand Team],
+I know I ghosted your cart. I’m not proud of it. But I was actually learning about abandoned cart emails and I figured, if I’m going to understand the game, why not play it?
+You didn’t send me an email. So here I am, sending you one.
+I may not have checked out the cart (because, well I am broke),
+But what if I could help write your abandoned cart emails instead?
+I’m Bhavesh, a movie nerd, cricket fan, and someone who’s fallen in love with copywriting. I’ve studied brand tonality, mastered push notifications, written ad scripts, and yep thought of applying for a job through your cart.
+If that’s not creativity, I don’t know what is.
+Even if it’s just an internship,I’d love to contribute.
+Because you may not have nudged me back
+but I’m nudging you now.
+
+Warm regards,
+Bhavesh Sharma
++91-7691001031
+@sharma_bhavesh_
+ "data-image="images/Brainstorm/brainstorm1.jpg">
+                        <img src="images/Brainstorm/brainstorm1.jpg" alt="Abandoned Cart or Job Application?">
+                        <button class="slide-button" data-brainstorm-name="Abandoned Cart or Job Application?">Abandoned Cart or Job Application?</button>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'brainstorming-slideshow')">&#10096;</a>
+                    <a class="next" onclick="plusSlides(1, 'brainstorming-slideshow')">&#10097;</a>
+                </div>
+            </div>
+            <div id="notificationModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h3 id="modal-brand-name"></h3>
+                    <div id="modal-logo" style="display: none;">
+                        <img id="modal-logo-img" src="" alt="">
+                    </div>
+                    <div id="modal-pushes">
+                        <p id="modal-push-list"></p>
+                    </div>
+                </div>
+            </div>
+                    <div class="slide" data-solution="Nice Try Diddy" data-pushes="“Nice Try Diddy” Solution
+
+                    The Problem: Every time a brand posts a sponsored ad on Instagram, each and every comment is: “Nice try, Diddy.”
+                    
+                    Translation: We see your ad. We're not buying it.
+                    It’s a Gen Z way of trolling, sarcastic resistance to aggressive marketing.
+                    And that hurts.
+                    
+                    Campaign Name : “Comment Bait” Series
+                    
+                    Ad Image:
+                    A pizza with “Nice Try, Diddy” written in pepperoni.
+                    Caption: Still not ordering? We tried. Again.
+                    
+                    
+                    Brand : Swiggy
+                    Caption “Mummy ki Kasam agar Nice Try, Diddy likha toh
+                    Paneer Butter Masala 2 mins mein wapas bhej denge”
+                    
+                    We Indians are emotional about “Mummy Ki Kasam”
+                    If it won’t work, it’ll still go viral. Will get free marketing.
+                    
+                    Zomato x Troll Whispering : 
+                    Caption : “Nice try, Diddy?
+                    We’re not Diddy. We’re the ones who knew you’d be hungry in 3…2…1…”
+                    
+                    Top Pinned Comment from Zomato : Nice Try Zomato.
+                    
+                    Reverse UNO Card
+                    Brand : Netflix India
+                    
+                    IG Reel (Sponsored Post for new show)
+                    Reel opens with someone typing: “Nice Try, Diddy.”
+                    screen freezes. UNO Reverse card 
+                    
+                     VO :
+                    “Arre bhai, Nice Try toh humne kiya tha.
+                    You scrolled. You stopped. You watched.
+                    Yeh Ad Sponsored Hai... Duniya Se.
+                    Brand : Myntra
+                    Post Type : Carousel
+                    
+                    Slide 1 : Yeh Ad Sponsored Hai
+                    Slide 2 : by heartbreak, low confidence, and not finding your size.
+                    
+                    Caption : “Nice try, Diddy? We heard that.
+                    Now go find something that actually fits who you are.
+                    " data-image="images/Brainstorm/brainstorm1.jpg">
+                        <img src="images/Brainstorm/brainstorm1.jpg" alt="Nice Try Diddy">
+                        <button class="slide-button" data-solution-name="Nice Try Diddy">Nice Try Diddy</button>
+                    </div>
+                    <div class="slide" data-solution="Abandoned Cart or Job Application?" data-image="images/Brainstorm/brainstorm2.jpg">
+                        <img src="images/Brainstorm/brainstorm2.jpg" alt="Abandoned Cart or Job Application?">
+                        <button class="slide-button" data-solution-name="Abandoned Cart or Job Application?">Abandoned Cart or Job Application?</button>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'solutions-slideshow')">&#10096;</a>
+                    <a class="next" onclick="plusSlides(1, 'solutions-slideshow')">&#10097;</a>
+                </div>
+            </div>
+            <div id="notificationModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h3 id="modal-brand-name"></h3>
+                    <div id="modal-logo" style="display: none;">
+                        <img id="modal-logo-img" src="" alt="">
+                    </div>
+                    <div id="modal-pushes">
+                        <p id="modal-push-list"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            #brainstorming-campaigns h2,
+            #solutions h2 {
+                font-size: 2.5em;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                text-align: center;
+                font-weight: bold;
+                animation: fadeIn 1s ease, slideInDown 0.5s ease-out;
+            }
+        
+            #brainstorming-campaigns p,
+            #solutions p {
+                font-size: 1.2em;
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 0 10%;
+                animation: fadeIn 1s ease 0.5s;
+            }
+        
+            .slideshow-container.vertical {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 60%;
+                height: 500px;
+                margin: 20px auto;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        
+            .slideshow-container.vertical .slide {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        
+            .slideshow-container.vertical .slide img {
+                max-width: 80%;
+                max-height: 80%;
+                object-fit: contain;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+        
+            .slideshow-container.vertical .slide img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        
+            .slideshow-container.vertical .slide-text {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.2em;
+                color: #333;
+            }
+        
+            .slideshow-container.vertical .prev,
+            .slideshow-container.vertical .next {
+                cursor: pointer;
+                position: absolute;
+                width: auto;
+                padding: 16px;
+                font-size: 20px;
+                color: #333;
+                font-weight: bold;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                background-color: rgba(255, 255, 255, 0.7);
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+        
+            .slideshow-container.vertical .next {
+                right: 10px;
+                left: auto;
+                border-radius: 3px 0 0 3px;
+            }
+        
+            .slideshow-container.vertical .prev:hover,
+            .slideshow-container.vertical .next:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        
+            .slideshow-container.vertical .slide-button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-top: 15px;
+            }
+        
+            .slideshow-container.vertical .slide-button:hover {
+                background-color: #0056b3;
+            }
+        
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+        
+                to {
+                    opacity: 1;
+                }
+            }
+        
+            @keyframes slideInDown {
+                from {
+                    transform: translateY(-50px);
+                }
+        
+                to {
+                    transform: translateY(0);
+                }
+            }
+        
+            /* Modal Styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                border-radius: 10px;
+                position: relative;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        
+            .modal-close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                cursor: pointer;
+            }
+        
+            .modal-close:hover,
+            .modal-close:focus {
+                color: #000;
+                text-decoration: none;
+            }
+        
+            #modal-brand-name {
+                font-size: 1.8em;
+                color: #2c3e50;
+                margin-bottom: 15px;
+                text-align: center;
+                font-weight: bold;
+            }
+        
+            #modal-logo {
+                display: none;
+                /*width: 50%;*/
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+        
+            #modal-logo-img {
+                max-width: 100%;
+                max-height: 150px;
+                object-fit: contain;
+            }
+        
+            #modal-pushes {
+                font-size: 1.1em;
+                color: #333;
+                line-height: 1.7;
+            }
+        
+            #modal-push-list {
+                margin-top: 10px;
+                white-space: pre-wrap;
+            }
+        </style>
+        <script>
+            let brainstormSlideIndex = 0;
+            let brainstormSlideshowInterval;
+            const brainstormSlideshowId = 'brainstorming-slideshow';
+            let solutionSlideIndex = 0;
+            let solutionSlideshowInterval;
+            const solutionSlideshowId = 'solutions-slideshow';
+        
+            const brainstormScripts = {
+                "Nice Try Diddy": "Detailed script for Nice Try Diddy",
+                "Abandoned Cart or Job Application?": "Detailed script for Abandoned Cart or Job Application?"
+            };
+        
+            const solutionScripts = {
+                "Nice Try Diddy": "Solution details for Nice Try Diddy",
+                "Abandoned Cart or Job Application?": "Solution details for Abandoned Cart or Job Application?"
+            };
+        
+            showSlides(brainstormSlideIndex, brainstormSlideshowId);
+            startSlideshow(brainstormSlideshowId, brainstormSlideshowInterval, () => {
+                brainstormSlideIndex++;
+                showSlides(brainstormSlideIndex, brainstormSlideshowId);
+            });
+        
+            showSlides(solutionSlideIndex, solutionSlideshowId);
+            startSlideshow(solutionSlideshowId, solutionSlideshowInterval, () => {
+                solutionSlideIndex++;
+                showSlides(solutionSlideIndex, solutionSlideshowId);
+            });
+        
+            function showSlides(n, slideshowId) {
+                let i;
+                let slides = document.getElementById(slideshowId).getElementsByClassName("slide");
+                if (n > slides.length) {
+                    n = 1;
+                    if (slideshowId === brainstormSlideshowId) {
+                        brainstormSlideIndex = 1;
+                    } else if (slideshowId === solutionSlideshowId) {
+                        solutionSlideIndex = 1;
+                    }
+                }
+                if (n < 1) {
+                    n = slides.length;
+                    if (slideshowId === brainstormSlideshowId) {
+                        brainstormSlideIndex = slides.length;
+                    } else if (slideshowId === solutionSlideshowId) {
+                        solutionSlideIndex = slides.length;
+                    }
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[n - 1].style.display = "flex";
+            }
+        
+            function plusSlides(n, slideshowId) {
+                clearInterval(slideshowInterval);
+                if (slideshowId === brainstormSlideshowId) {
+                    brainstormSlideIndex += n;
+                    showSlides(brainstormSlideIndex, slideshowId);
+                    startSlideshow(slideshowId, brainstormSlideshowInterval, () => {
+                        brainstormSlideIndex++;
+                        showSlides(brainstormSlideIndex, slideshowId);
+                    });
+                } else if (slideshowId === solutionSlideshowId) {
+                    solutionSlideIndex += n;
+                    showSlides(solutionSlideIndex, slideshowId);
+                    startSlideshow(slideshowId, solutionSlideshowInterval, () => {
+                        solutionSlideIndex++;
+                        showSlides(solutionSlideIndex, slideshowId);
+                    });
+                }
+            }
+        
+            function startSlideshow(slideshowId, intervalVar, callback) {
+                intervalVar = setInterval(callback, 5000);
+            }
+        
+            document.querySelectorAll('.slide-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const brainstormName = this.getAttribute('data-brainstorm-name');
+                    const solutionName = this.getAttribute('data-solution-name');
+                    const modal = document.getElementById("notificationModal");
+                    const modalClose = document.querySelector(".modal-close");
+                    const modalBrandName = document.getElementById("modal-brand-name");
+                    const modalLogo = document.getElementById("modal-logo");
+                    const modalPushes = document.getElementById("modal-pushes");
+                    const modalPushList = document.getElementById("modal-push-list");
+        
+                    if (brainstormName) {
+                        modalBrandName.textContent = brainstormName;
+                        modalPushList.textContent = brainstormScripts[brainstormName] || "No script available.";
+                    } else if (solutionName) {
+                        modalBrandName.textContent = solutionName;
+                        modalPushList.textContent = solutionScripts[solutionName] || "No solution details available.";
+                    }
+        
+                    modalLogo.style.display = "none";
+                    modal.style.display = "flex";
+        
+                    modalClose.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                });
+            });
+        </script>
+        
+        <section id="recco-lab" class="section">
+    <div class="container">
+        <h2 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; text-align: center; font-weight: bold; animation: fadeIn 1s ease, slideInDown 0.5s ease-out;">
+            Recco Lab
+        </h2>
+        <p style="font-size: 1.2em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: center; padding: 0 10%; animation: fadeIn 1s ease 0.5s;">
+            I write about cinema like it’s the last thing I’ll ever do. <br>
+            Movie recs. Show recs. Emotional reccos. Heartbreak reccos. <br>
+            Reccos for when you’ve been ghosted, and even when you just saw Ankhon Dekhi for the third time and now wanna stare into the void. <br>
+            This is where the Cinephile in me breathes.
+        </p>
+
+        <div style="margin-bottom: 20px; text-align: center; animation: fadeIn 1s ease 0.5s; display: flex; align-items: center; flex-direction: row; justify-content: center;">
+            <img src="images/ReccoLab/recco2.jpg" alt="Cinephilia Club Instagram" style="max-width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 20px;">
+            <a href="https://www.instagram.com/cinephilia.club" target="_blank" style="text-decoration: none;">
+                <p style="font-size: 1.2em; color: white; background-color: #e4405f; padding: 10px 20px; border-radius: 5px; display: inline-block; transition: background-color 0.3s ease;">
+                    <i class="fab fa-instagram" style="margin-right: 5px;"></i> Cinephilia Club
+                </p>
+            </a>
+        </div>
+
+        <p style="font-size: 1em; color: #555; margin-top: 10px; text-align: center;">
+            Over 300 posts, multiple viral reels (including one at 15M+), all curated, written, and edited by me. <br>
+            Cinephilia Club isn’t just an IG handle, it's a reflection of how much I love talking about movies, connecting with fellow fans, and staying creatively active. From aesthetic edits to pop-culture hooks every post is a love letter to cinema.
+        </p>
+
+        <div class="content-links" style="margin-top: 20px; animation: fadeIn 1s ease 0.5s;">
+            <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 15px; text-align: center; font-weight: bold;">
+                <span style="color: white; background-color: #007bff; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-right: 10px;">Recommendation Community (RC)</span> Content Written:
+            </h3>
+            <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                <li style="margin-bottom: 15px; text-align: center;">
+                    <a href="https://www.instagram.com/p/CL9cSRRF74n/?igsh=MThxbDcxbnRidTJyZg==" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #007bff;  padding-bottom: 5px;">
+                        <img src="images/ReccoLab/recco5.jpg" alt="RC Content 1" style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 15px; vertical-align: middle;">
+                        <span style="font-size: 1.2em; font-weight: 500;">RC Content 1</span>
+                    </a>
+                </li>
+                <li style="margin-bottom: 15px; text-align: center;">
+                    <a href="https://www.instagram.com/p/CRHQ07ftMJ1/?igsh=enlsMnU1MjgyaXhj" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #007bff;  padding-bottom: 5px;">
+                        <img src="images/ReccoLab/recco6.jpg" alt="RC Content 2" style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 15px; vertical-align: middle;">
+                        <span style="font-size: 1.2em; font-weight: 500;">RC Content 2</span>
+                    </a>
+                </li>
+                <li style="margin-bottom: 15px; text-align: center;">
+                    <a href="https://www.instagram.com/p/CROuWO2tAFx/?igsh=MWVjbzExbGs4cHh2eQ==" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #007bff;  padding-bottom: 5px;">
+                        <img src="images/ReccoLab/recco7.jpg" alt="RC Content 3" style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 15px; vertical-align: middle;">
+                        <span style="font-size: 1.2em; font-weight: 500;">RC Content 3</span>
+                    </a>
+                </li>
+                <li style="margin-bottom: 15px; text-align: center; font-size: 1.1em;">Wrote 2 copies (back in 2021) for the paid promotion of an MX Player Original - “Hello Mini”. That Post went to meme pages to post in order to promote the show.</li>
+            </ul>
+            <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 15px; text-align: center; font-weight: bold;">
+                <span style="color: white; background-color: #007bff; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-right: 10px;">Philmyyy</span>
+            </h3>
+            <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                <li style="margin-bottom: 15px; text-align: center;">
+                    <a href="https://www.instagram.com/p/DH0X-NfNQ32/?igsh=MTdhd3ZlOXlmbnNrNg==" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #007bff;  padding-bottom: 5px;">
+                        <img src="images/ReccoLab/recco8.jpg" alt="Philmy Content 1" style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 15px; vertical-align: middle;">
+                        <span style="font-size: 1.2em; font-weight: 500;">Philmy Content 1</span>
+                    </a>
+                </li>
+                <li style="margin-bottom: 15px; text-align: center;">
+                    <a href="https://www.instagram.com/p/DH_DdcINxEB/?igsh=a2J6YjI5NDY0a2kz" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: #007bff;  padding-bottom: 5px;">
+                        <img src="images/ReccoLab/recco9.jpg" alt="Philmy Content 2" style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 15px; vertical-align: middle;">
+                        <span style="font-size: 1.2em; font-weight: 500;">Philmy Content 2</span>
+                    </a>
+                </li>
+                <li style="margin-bottom: 15px; text-align: center; font-size: 1.1em;">Wrote creative posts around JioHotstar’s films/series as part of their paid campaign in promoting their movies/shows</li>
+                <li style="margin-bottom: 15px; text-align: center; font-size: 1.1em;">Wrote a few more posts, yet to be uploaded</li>
+            </ul>
+            <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px; text-align: center; font-weight: bold;">Upcoming Projects:</h3>
+            <p style="text-align: center; font-size: 1.1em;">Currently working on reel scripts for an upcoming IG collab. Will update with confirmed content and feedback soon.</p>
+        </div>
+    </div>
+</section>
+
+        
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+    </main>
+
+    <footer class="site-footer" style="margin-top: 50px; background-color: #f0f0f0; padding: 20px 0; border-top: 1px solid #ddd; animation: fadeIn 1s ease;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="images/footer/footer.jpg" alt="Footer Image" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 style="font-size: 2em; color: #2c3e50; margin-bottom: 20px; font-weight: bold;">LET’S COLLAB :</h2>
+                    <p style="font-size: 1.1em; color: #555; line-height: 1.7; margin-bottom: 20px;">
+                        I’m always open to work, collabs, ideas, freelance gigs, or just movie talk. You’ll find me somewhere between Letterboxd reviews and push notification punchlines.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 1.1em; color: #2c3e50; font-weight: 600;">Contact No :</span>
+                        <a href="tel:+917691001031" style="color: #007bff; text-decoration: none; font-size: 1.1em;">+91-7691001031</a>
+                    </div>
+                    <div>
+                        <span style="font-size: 1.1em; color: #2c3e50; font-weight: 600;">Mail me at :</span>
+                        <a href="mailto:bhaveshs8055@gmail.com" style="color: #007bff; text-decoration: none; font-size: 1.1em;">bhaveshs8055@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <div class="col-12 text-center">
+                    <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 15px; font-weight: bold;">Find me online:</h3>
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                        <a href="https://www.instagram.com/sharma_bhavesh_/" target="_blank" style="color: #e4405f; font-size: 1.2em; text-decoration: none;" title="Instagram">
+                            Instagram
+                        </a>
+                        <a href="https://www.linkedin.com/in/bhavesh-sharma-4ba42817b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #0a66c2; font-size: 1.2em; text-decoration: none;" title="LinkedIn">
+                            LinkedIn
+                        </a>
+                        <a href="https://x.com/sharma_bhaveshh?t=0o6sYDJoitZYVpU6bGdn2Q&s=09" target="_blank" style="color: #000000; font-size: 1.2em; text-decoration: none;" title="X">
+                            X
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100010764526296" target="_blank" style="color: #1877f2; font-size: 1.2em; text-decoration: none;" title="Facebook">
+                            Facebook
+                        </a>
+                        <a href="https://letterboxd.com/HeyWolvie/" target="_blank" style="color: #00c49f; font-size: 1.2em; text-decoration: none;" title="Letterboxd">
+                            Letterboxd
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-top: 20px;">
+                    <p style="font-size: 1em; color: #555;">Portfolio in progress, ideas never stop.</p>
+                </div>
+            </div>
+        </div>    
+    </footer>
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modal-brand-name">Brand Name</h2>
+            <img id="modal-logo" src="" alt="Brand Logo">
+            <div id="modal-pushes" class="modal-pushes">
+                <p>Push Notifications:</p>
+                <ul id="modal-push-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        let slideIndex = 0;
+        let slideshowInterval;
+        const slideshowId = 'push-notification-slideshow';
+
+        showSlides(slideIndex, slideshowId);
+        startSlideshow(slideshowId);
+
+        function showSlides(n, slideshowId) {
+            let i;
+            let slides = document.getElementById(slideshowId).getElementsByClassName("slide");
+            let prevButton = document.getElementById(slideshowId).querySelector(".prev");
+            let nextButton = document.getElementById(slideshowId).querySelector(".next");
+
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            if (slides && slides[slideIndex - 1]) {
+                slides[slideIndex - 1].style.display = "flex";
+                updateSlideText(slides[slideIndex - 1]);
+                slides[slideIndex - 1].style.display = "flex"; // Ensure current slide is displayed
+            }
+             // Position the buttons
+            if (prevButton) {
+                prevButton.style.left = '0px';
+            }
+            if (nextButton) {
+                nextButton.style.right = '0px';
+            }
+        }
+
+        function plusSlides(n, slideshowId) {
+            clearInterval(slideshowInterval);
+            slideIndex += n;
+            showSlides(slideIndex, slideshowId);
+            startSlideshow(slideshowId);
+        }
+
+        function startSlideshow(slideshowId) {
+            slideshowInterval = setInterval(() => {
+                plusSlides(1, slideshowId);
+            }, 5000);
+        }
+
+        function updateSlideText(slide) {
+            const brand = slide.getAttribute('data-brand');
+            const pushes = slide.getAttribute('data-pushes');
+            const slideTextElement = slide.querySelector('.slide-text');
+            let currentPushIndex = parseInt(slide.getAttribute('data-current-push-index')) || 0;
+
+            if (currentPushIndex >= pushes.split("|").length) {
+                currentPushIndex = 0;
+            }
+            //show first push notification
+            slideTextElement.textContent = pushes.split("|")[0];
+            slide.setAttribute('data-current-push-index', currentPushIndex + 1);
+        }
+
+        const modal = document.getElementById("notificationModal");
+        const modalClose = document.querySelector(".modal-close");
+        const modalBrandName = document.getElementById("modal-brand-name");
+        const modalLogo = document.getElementById("modal-logo");
+        const modalPushes = document.getElementById("modal-pushes");
+        const modalPushList = document.getElementById("modal-push-list");
+
+        modalClose.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        const buttons = document.querySelectorAll('.slide-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const slide = this.closest('.slide');
+                const brandName = this.getAttribute('data-brand-name');
+                const pushes = slide.getAttribute('data-pushes');
+                const imageSrc = slide.querySelector('img').src;
+
+                modalBrandName.textContent = brandName;
+                modalLogo.src = imageSrc;
+                modalPushList.innerHTML = "";
+
+                if (pushes) {
+                    const pushesArray = pushes.split("|");
+                    pushesArray.forEach(push => {
+                        const li = document.createElement("li");
+                        li.textContent = push;
+                        modalPushList.appendChild(li);
+                    });
+                } else {
+                    modalPushList.innerHTML = "<p>No push notifications found.</p>";
+                }
+
+                modal.style.display = "flex";
+            });
+        });
+    </script>
+</body>
+</html>
